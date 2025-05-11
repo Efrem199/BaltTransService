@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>БалтТрансСервис</title>
+  <meta name="description" content="Железнодорожные перевозки нефтепродуктов по России и СНГ от БалтТрансСервис">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- jVectorMap стили (локально) -->
+  <link rel="stylesheet" href="jquery-jvectormap.css">
+  <!-- Главные стили -->
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="overlay">
+      <div class="header-content container">
+        <img src="logo.png" alt="БалтТрансСервис Logo" class="logo">
+        <h1>БАЛТТРАНССЕРВИС</h1>
+        <p>Надёжные железнодорожные перевозки по России и СНГ</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content container" role="main">
+
+    <!-- О КОМПАНИИ -->
+    <section id="about" class="about-section">
+      <h2>О компании</h2>
+      <div class="about-cards">
+        <div class="about-card">
+          <i class="fas fa-industry"></i>
+          <p>ООО «БалтТрансСервис» (БТС) образовано в 1999&nbsp;г. в Санкт-Петербурге.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-train"></i>
+          <p>«БалтТрансСервис» — один из крупнейших частных операторов перевозок нефтеналивных грузов в России и СНГ.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-network-wired"></i>
+          <p>Эксплуатирует собственные формирования на полигонах Северной, Московской, Октябрьской, Куйбышевской, Северо-Кавказской, Юго-Восточной и Калининградской дорог.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Представительства в Москве, Рязани, Ярославле, Нижнекамске, Анжеро-Судженске, Великих Луках и г. Дно; депо в Иваново; «РемТрансСервис» в Рыбинске; «БТС-Локомотивные Решения».</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-award"></i>
+          <p>Отмечен отраслевыми наградами за качество, безопасность и ответственный подход к перевозкам.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- В ЦИФРАХ -->
+    <section id="stats" class="stats-section">
+      <h2>В цифрах</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="counter" data-count="19.6">0</span>
+          <p>млн т нефтепродуктов/год</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="13.8">0</span>
+          <p>тыс ед. подвижного состава</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="6">0</span>
+          <p>тыс цистерн</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="60">0</span>
+          <p>магистральных тепловозов</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТРОЛЬ ПРОЕКТОВ -->
+    <section id="projects" class="charts-section">
+      <h2>Контроль выполнения проектов</h2>
+      <canvas id="progressChart"></canvas>
+    </section>
+
+    <!-- ИСТОРИЯ РАЗВИТИЯ -->
+    <section id="history" class="history-section">
+      <h2>История развития</h2>
+      <div class="history-grid">
+        <div class="history-card">
+          <div class="history-date">1999</div>
+          <p>«БалтТрансСервис» начинает работу как оператор перевозки нефтеналивных грузов по России и Балтиям.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2001</div>
+          <p>Вступление в Ассоциацию перевозчиков и операторов, получение отраслевых наград.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2004</div>
+          <p>Запуск собственных поездных формирований со станции Новоярославская.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2005</div>
+          <p>Расширение маршрутов на полигонах Северной, Октябрьской, Московской и Северо-Кавказской дорог.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2008</div>
+          <p>Открытие вагоноремонтного депо в Иваново; представительства в 8 городах.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2009</div>
+          <p>Вхождение в группу Globaltrans — лидера рынка грузовых перевозок.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2010</div>
+          <p>Создание дочернего предприятия «РемТрансСервис» в Рыбинске.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2012</div>
+          <p>Увеличение парка локомотивов до 60 единиц.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2017–2022</div>
+          <p>Поставка новых локомотивов, запуск мастерских, расширение флота более 6 000 цистерн.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- РЕГИОНАЛЬНЫЕ ПРЕДСТАВИТЕЛЬСТВА -->
+    <section id="regional" class="regional-section"> </section>
+
+    <!-- ГДЕ МЫ НАХОДИМСЯ -->
+    <section id="map-section" class="map-section">
+      <h2>Где мы находимся</h2>
+      <div id="map" class="map-container"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="overlay">
+      <p>© 1999–2023<br>ООО «БалтТрансСервис»<br>Все права защищены.</p>
+      <address>
+        197229, г. Санкт-Петербург, Лахтинский просп., 85 корп. 3, стр. 1, БЦ «Business Box»,<br>
+        тел.: +7 (812) 326-50-10, +7 (812) 326-50-21,<br>
+        e-mail: <a href="mailto:info@bts.ru">info@bts.ru</a>
+      </address>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="jquery-jvectormap.js"></script>
+  <script src="jquery-jvectormap-ru-2015.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="scripts1.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BaltTransService</title>
+  <meta name="description" content="Rail transportation of petroleum products across Russia and the CIS by BaltTransService">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- Main styles -->
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="overlay">
+      <div class="header-content container">
+        <img src="logo.png" alt="BaltTransService Logo" class="logo">
+        <h1>BALTTRANSSERVICE</h1>
+        <p>Reliable rail transportation of petroleum products across Russia and the CIS</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content container" role="main">
+
+    <!-- ABOUT THE COMPANY -->
+    <section id="about" class="about-section">
+      <h2>About the Company</h2>
+      <div class="about-cards">
+        <div class="about-card">
+          <i class="fas fa-industry"></i>
+          <p>BaltTransService LLC (BTS) was founded in 1999 in Saint Petersburg.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-train"></i>
+          <p>BaltTransService is one of the largest private operators specializing in the rail transport of liquid petroleum products in Russia and the CIS.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-network-wired"></i>
+          <p>We operate our own train formations on the North, Moscow, October, Kuybyshev, North-Caucasus, South-East and Kaliningrad railway lines.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Offices in Moscow, Ryazan, Yaroslavl, Nizhnekamsk, Anzhero-Sudzhensk, Velikiye Luki and Dno; wagon repair depot in Ivanovo; locomotive repair subsidiary “RemTransService” in Rybinsk; BTS Locomotive Solutions.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-award"></i>
+          <p>Recipient of multiple industry awards for quality, safety and responsible business practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IN FIGURES -->
+    <section id="stats" class="stats-section">
+      <h2>In Figures</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="counter" data-count="19.6">0</span>
+          <p>million tonnes transported per year</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="13.8">0</span>
+          <p>thousand pieces of rolling stock managed</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="6">0</span>
+          <p>thousand tank cars owned</p>
+        </div>
+        <div class="stat-item">
+          <span class="counter" data-count="60">0</span>
+          <p>mainline locomotives in operation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT PROGRESS -->
+    <section id="projects" class="charts-section">
+      <h2>Project Progress</h2>
+      <canvas id="progressChart"></canvas>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history" class="history-section">
+      <h2>Our History</h2>
+      <div class="history-grid">
+        <div class="history-card">
+          <div class="history-date">1999</div>
+          <p>BTS begins operations as a rail operator of liquid petroleum products across Russia and the Baltics.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2001</div>
+          <p>Joins the Association of Carriers and Operators; wins industry awards.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2004</div>
+          <p>Launches own train formations from Novoyaroslavskaya station on the Northern Railway.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2005</div>
+          <p>Expands routes on the Northern, October, Moscow and North-Caucasus lines.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2008</div>
+          <p>Acquires wagon repair depot in Ivanovo; opens 8 regional offices.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2009</div>
+          <p>Becomes part of Globaltrans Group, a regional freight leader.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2010</div>
+          <p>Creates RemTransService locomotive repair subsidiary in Rybinsk.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2012</div>
+          <p>Increases mainline locomotive fleet to 60 units.</p>
+        </div>
+        <div class="history-card">
+          <div class="history-date">2017–2022</div>
+          <p>Delivers new locomotives, launches wheelset workshops, expands tank car fleet by over 6,000 units.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONAL OFFICES -->
+    <section id="regional" class="regional-section">
+      <h2>Regional Offices</h2>
+      <div id="regional-map" class="map-container"></div>
+    </section>
+
+    <!-- WHERE WE ARE -->
+    <section id="map-section" class="map-section">
+      <h2>Where We Are</h2>
+      <div id="map" class="map-container"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="overlay">
+      <p>© 1999–2023<br>BaltTransService LLC<br>All rights reserved.</p>
+      <address>
+        197229, St. Petersburg, Lakhtinskiy Prospekt 85, bldg 3, str 1, Business Box,<br>
+        Phone: +7 (812) 326-50-10, +7 (812) 326-50-21,<br>
+        Email: <a href="mailto:info@bts.ru">info@bts.ru</a>
+      </address>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery-jvectormap.js"></script>
+  <script src="jquery-jvectormap-ru-2015.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=en_US"></script>
+  <script src="scripts1.js"></script>
+</body>
+</html>

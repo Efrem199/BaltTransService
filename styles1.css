@@ -1,0 +1,334 @@
+:root {
+  --bg-top: #ece9e6;
+  --bg-bottom: #fff;
+  --pattern: rgba(0,0,0,0.02);
+  --text: #1f1f1f;
+  --accent: #0056c9;
+  --accent-dark: #003d99;
+  --card-bg: #f0f8ff;
+  --xl: 3rem;
+  --lg: 2rem;
+  --md: 1rem;
+}
+
+/* Сброс */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    linear-gradient(to bottom, var(--bg-top), var(--bg-bottom)),
+    repeating-linear-gradient(45deg, var(--pattern) 0 1px, transparent 1px 20px);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--md);
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Header */
+.site-header {
+  background: url('header.jpg') center/cover no-repeat;
+  height: 180px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .overlay {
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content {
+  text-align: center;
+  width: 100%;
+}
+.logo {
+  height: 70px;
+  filter: brightness(0) invert(1);
+}
+.header-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: var(--xl);
+  margin-top: .5rem;
+  letter-spacing: 4px;
+}
+.header-content p {
+  color: #fff;
+  font-size: var(--md);
+}
+
+/* О компании */
+.about-section {
+  margin: 2rem 0 1rem;
+}
+.about-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.about-section h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.about-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.about-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+.about-card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+.about-card p {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* В цифрах */
+.stats-section {
+  margin: 2rem 0 1rem;
+}
+.stats-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.stats-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.stat-item {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 8px;
+  flex: 1 1 200px;
+  max-width: 240px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.stat-item:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.counter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  color: var(--accent);
+  display: block;
+}
+
+/* График проектов */
+.charts-section {
+  margin: 2rem 0;
+}
+.charts-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.charts-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.charts-section canvas {
+  width: 100% !important;
+  max-height: 350px;
+}
+
+/* История развития */
+.history-section {
+  margin: 2rem 0 1rem;
+}
+.history-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.history-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 1.5rem;
+}
+.history-card {
+  background: #f9f9f9;
+  border-left: 4px solid var(--accent-dark);
+  padding: 2rem;
+  border-radius: 6px;
+  transition: transform .3s ease;
+}
+.history-card:hover {
+  transform: translateY(-5px);
+}
+.history-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent-dark);
+  margin-bottom: .75rem;
+}
+
+/* Региональные представительства */
+.regional-section {
+  margin: 2rem 0 1rem;
+}
+.regional-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.regional-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+#regional-map {
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+/* Где мы находимся */
+.map-section {
+  margin: 2rem 0;
+}
+.map-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--lg);
+  color: var(--accent);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.map-section h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.map-container {
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Footer */
+.site-footer {
+  background: url('footer.jpg') center/cover no-repeat;
+  border-radius: 16px 16px 0 0;
+  margin-top: 2rem;
+}
+.site-footer .overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+}
+.site-footer p,
+.site-footer address {
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+.site-footer address a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-header { height: 140px; }
+  .header-content h1 { font-size: 2.5rem; }
+  .about-card,
+  .stat-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+  .history-date {
+    font-size: 1.5rem;
+  }
+  #regional-map,
+  .map-container {
+    height: 250px;
+  }
+}
